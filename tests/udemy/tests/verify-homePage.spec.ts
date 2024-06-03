@@ -10,6 +10,5 @@ test.describe('verify home page',()=>{
         await homePage.searchItem(searchTerm);
         expect( await page.url()).toContain(searchTerm);
         await homePage.verifySearchHeading(searchTerm);
-
     })
 })
