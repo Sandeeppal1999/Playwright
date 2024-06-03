@@ -8,8 +8,8 @@ test.describe('verify home page',()=>{
         const loginPage= new LoginPage(page);
         await loginPage.navigateHomepage();
         await homePage.searchItem(searchTerm);
-        expect( await page.url()).toContain(searchTerm)
-        await page.waitForTimeout(10000);
-  
+        expect( await page.url()).toContain(searchTerm);
+        await homePage.verifySearchHeading(searchTerm);
+
     })
 })
