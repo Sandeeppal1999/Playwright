@@ -1,1 +1,0 @@
- browser is global fixtue {browser} must be wrapped in curly bracket {browser} , after wrapaped curly treated a playwright fixtue other wise treat as normal fixture(param)
