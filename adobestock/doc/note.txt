@@ -1,2 +1,28 @@
 email: rockstarkapoor100+testadobestock@gmail.com
 password:Adobestock@123
+
+URL: https://stock.adobe.com/in/
+
+cmd to run test: npx playwright test commonHome.spec.ts --headed --project=chromium
+
+
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://stock.adobe.com/in/');
+  await page.getByLabel('Menu').click();
+  await page.getByLabel('App switcher').click();
+  const page1Promise = page.waitForEvent('popup');
+  await page.getByRole('button', { name: 'Creative Cloud Creative Cloud' }).click();
+  const page1 = await page1Promise;
+  const page2Promise = page.waitForEvent('popup');
+  await page.getByRole('button', { name: 'Browse All Apps' }).click();
+  const page2 = await page2Promise;
+  await page.locator('.left-nav-overlay').click();
+  await page.getByLabel('menu').click();
+  await page.getByLabel('App switcher').click();
+  await page.getByLabel('App switcher').locator('div').filter({ hasText: 'PhotosIllustrationsVectorsVideosAudioTemplatesFreeFontsPlugins3DGenerateSellPric' }).first().click();
+  await page.getByLabel('App switcher').locator('div').filter({ hasText: 'PhotosIllustrationsVectorsVideosAudioTemplatesFreeFontsPlugins3DGenerateSellPric' }).first().click();
+  await page.getByLabel('App switcher').click();
+  await page.locator('.left-nav-overlay').click();
+});

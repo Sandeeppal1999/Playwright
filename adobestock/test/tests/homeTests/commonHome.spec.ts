@@ -11,8 +11,8 @@ test.describe('Home page',()=>{
         // Veify page URL and Title is correct
         commonHome.verifyURL('adobe.com/in/');
         await expect (await page.title()).toContain('Stock photos, royalty-free images, graphics, vectors & videos | Adobe Stock');
+        await commonHome.clickOnMenu();
 
     })
 
 })
-//npx playwright test commonHome.spec.ts --headed --project=chromium
