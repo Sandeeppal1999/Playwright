@@ -26,3 +26,7 @@ test('test', async ({ page }) => {
   await page.getByLabel('App switcher').click();
   await page.locator('.left-nav-overlay').click();
 });
+
+
+-------------------------------------
+Verify menu item redirection is correct and contain correct name

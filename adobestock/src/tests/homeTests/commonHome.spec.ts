@@ -1,17 +1,16 @@
 
 import{ expect, test} from '@playwright/test'
-import { CommonHome } from '@test/adobestock/test/pages/HomePages/commonHome';
+import { CommonHome } from '@test/adobestock/src/pages/HomePages/commonHome';
 
 
-const path= 'https://stock.adobe.com/in/';
-test.describe('Home page',()=>{
+
+test.describe('Given I am @anonymous adobe user',()=>{
     test('Verify Home page',async({page})=>{
         const commonHome = new CommonHome(page);
-        await page.goto(path);
+        await page.goto('/');
         // Veify page URL and Title is correct
-        commonHome.verifyURL('adobe.com/in/');
+        commonHome.verifyURL('https://stock.adobe.com/in');
         await expect (await page.title()).toContain('Stock photos, royalty-free images, graphics, vectors & videos | Adobe Stock');
-        await commonHome.clickOnMenu();
 
     })
 
