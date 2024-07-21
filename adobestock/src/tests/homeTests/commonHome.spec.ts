@@ -5,7 +5,7 @@ test.describe('Given I am @anonymous adobe user',()=>{
         const commonHome = new CommonHome(page);
         await page.goto('/');
         // Veify page URL and Title is correct
-        commonHome.verifyURL('https://stock.adobe.com/in');
+        commonHome.verifyURL('https://stock.adobe.com/');
         await expect (await page.title()).toContain('Stock photos, royalty-free images, graphics, vectors & videos | Adobe Stock');
 
     })
