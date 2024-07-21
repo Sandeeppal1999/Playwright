@@ -2,7 +2,7 @@ import{test} from '@playwright/test'
 
 import { CommonHome } from '@test/adobestock/src/pages/HomePages/commonHome';
 test.describe('Given I am @anonymous adobe user',()=>{
-    test.only('WHEN is visit adobestock.com THEN click on Menu option THEN verify menu otpion redirection is correct',async({page})=>{
+    test('WHEN is visit adobestock.com THEN click on Menu option THEN verify menu otpion redirection is correct',async({page})=>{
         const commonHome = new CommonHome(page);
         await page.goto('/');
         await commonHome.clickOnMenu();
