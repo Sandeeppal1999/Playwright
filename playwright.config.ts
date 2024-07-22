@@ -32,7 +32,7 @@ export default defineConfig({
     video:'on',
     headless:true,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://stock.adobe.com/in',
+    baseURL: 'https://stock.adobe.com',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
    
