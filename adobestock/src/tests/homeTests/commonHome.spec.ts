@@ -1,4 +1,4 @@
-import{ expect, test} from '@playwright/test'
+import{test, expect} from '@test/adobestock/src/setup/test-setup'
 import { CommonHome } from '@test/adobestock/src/pages/HomePages/commonHome';
 test.describe('Given I am @anonymous adobe user',()=>{
     test('Verify Home page',async({page})=>{

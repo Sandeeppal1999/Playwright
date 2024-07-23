@@ -1,5 +1,4 @@
-import{test} from '@playwright/test'
-
+import{test} from '@test/adobestock/src/setup/test-setup'
 import { CommonHome } from '@test/adobestock/src/pages/HomePages/commonHome';
 test.describe('Given I am @anonymous adobe user',()=>{
     test('WHEN is visit adobestock.com THEN click on Menu option THEN verify menu otpion redirection is correct',async({page})=>{
