@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-  testDir: './test/*',
+  testDir: './test/practices',
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 0 : 0,
