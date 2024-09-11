@@ -1,10 +1,10 @@
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-  testDir: './adobestock/src/tests/',
+  testDir: './test/*',
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 1 : 0,
+  retries: process.env.CI ? 0 : 0,
   workers: process.env.CI ? 1 : 1,
   reporter: [['html', { outputFolder: 'playwright-report', open: 'on-failure' }],['list']],
   timeout:30*1000,
@@ -15,10 +15,10 @@ export default defineConfig({
   use: {
     screenshot:'on',
     trace: 'on',
-    video:'on',
+    video:"retain-on-failure",
     headless:true,
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: 'https://stock.adobe.com',
+    baseURL: '',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
    

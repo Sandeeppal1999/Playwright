@@ -1,5 +1,5 @@
-import { Login } from './../../pages/login';
-import{test} from '@test/adobestock/src/setup/test-setup'
+import test from 'playwright/test';
+import { Login } from '../../pages/login';
 
 test.describe('Given I am @anonymous adobe user',()=>{
     test('verify create an account form ',async({page})=>{
