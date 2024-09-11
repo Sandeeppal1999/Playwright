@@ -1,5 +1,6 @@
 name: practices
-'on':
+
+on:
   push:
     branches: '-main'
   pull request: null
@@ -7,6 +8,7 @@ name: practices
     - opened
     - reopened
   workflow_dispatch: null
+  
 jobs:
   tests_e2e:
     name: Run end-to-end tests
