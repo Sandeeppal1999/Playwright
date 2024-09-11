@@ -5,7 +5,7 @@
   type:
     - opened
     - reopened
-  workflow_dispatch
+
 jobs:
   tests_e2e:
     name: Run end-to-end tests
