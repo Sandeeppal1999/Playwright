@@ -1,3 +1,5 @@
+name: Practices-test
+
 on:
   push:
     branches:

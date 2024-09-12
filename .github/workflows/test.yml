@@ -1,3 +1,5 @@
+name: test workflow
+
 'on': push
 jobs:
   firsts-job:

@@ -9,7 +9,7 @@ export default defineConfig({
   reporter: [['html', { outputFolder: 'playwright-report', open: 'on-failure' }],['list']],
   timeout:30*1000,
   expect:{
-  timeout:5500,
+  timeout:5000,
   },
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -23,9 +23,6 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
    
   },
-
- 
-  
 
   /* Configure projects for major browsers */
   projects: [
